@@ -99,7 +99,7 @@ youruser ALL=(root) NOPASSWD: /bin/sh -c echo detect > /sys/class/drm/card1-DP-2
 ## 4. Install
 
 ```bash
-git clone https://github.com/<you>/sunshine-ctl
+git clone https://github.com/FuzzyHD1993/sunshine-ctl
 cd sunshine-ctl
 ./install.sh
 ```
