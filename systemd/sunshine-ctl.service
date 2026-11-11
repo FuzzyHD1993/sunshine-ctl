@@ -1,0 +1,15 @@
+[Unit]
+Description=Sunshine stream display manager (virtual output + mirror)
+After=app-dev.lizardbyte.app.Sunshine.service
+Wants=app-dev.lizardbyte.app.Sunshine.service
+
+[Service]
+Type=simple
+Environment=XDG_RUNTIME_DIR=%t
+Environment=WAYLAND_DISPLAY=wayland-1
+ExecStart=%h/.local/bin/sunshine-ctl watch
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
